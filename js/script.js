@@ -23,17 +23,59 @@ const modelliBici =[
     },  
 ]
 //arrey di confronto per i pesi
-let arrey_pesi=[]
+let array_pesi=[]
 
 modelliBici.forEach((elem) => {
     //estrapolo tutti i valori peso e li immetto 
-    arrey_pesi.push(parseInt(elem.peso))
+    array_pesi.push(parseInt(elem.peso))
 })
 //metto in ordine crescente gli elementi all interno del arrey
-arrey_pesi.sort()
-console.log(arrey_pesi)
+array_pesi.sort()
+console.log(array_pesi)
 modelliBici.forEach((elem) => {
-    if(elem.peso == arrey_pesi[0]){
+    if(elem.peso == array_pesi[0]){
         console.log(elem)
     }
 })
+
+
+
+//snack 2
+
+const squadreCalcio =[
+    {
+        name : 'juventus',
+        puntiFatti : 0,
+        falliSubiti : 0
+    },
+    {
+        name : 'inter',
+        puntiFatti : 0,
+        falliSubiti : 0
+    },
+    {
+        name : 'napoli',
+        puntiFatti : 0,
+        falliSubiti : 0
+    },
+    {
+        name : 'milan',
+        puntiFatti : 0,
+        falliSubiti : 0
+    },
+    {
+        name : 'fiorentina',
+        puntiFatti : 0,
+        falliSubiti : 0
+    },  
+]
+console.log(squadreCalcio)
+
+squadreCalcio.forEach((elem) => {
+    elem.puntiFatti = Math.floor(Math.random()*50 + 1)
+    elem.falliSubiti = Math.floor(Math.random()*10 + 1)
+})
+
+const nomiSquadreFalli = squadreCalcio.map(({name,falliSubiti}) =>({name,falliSubiti}))
+
+console.log(nomiSquadreFalli)
