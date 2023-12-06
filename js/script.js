@@ -34,7 +34,8 @@ array_pesi.sort()
 console.log(array_pesi)
 modelliBici.forEach((elem) => {
     if(elem.peso == array_pesi[0]){
-        console.log(elem)
+        let {name, peso}=elem
+        console.log(`la bici ${name} e\' la piu leggera e pesa ${peso}`)
     }
 })
 
@@ -79,3 +80,5 @@ squadreCalcio.forEach((elem) => {
 const nomiSquadreFalli = squadreCalcio.map(({name,falliSubiti}) =>({name,falliSubiti}))
 
 console.log(nomiSquadreFalli)
+
+
